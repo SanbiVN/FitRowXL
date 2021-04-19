@@ -1,4 +1,4 @@
-# FitRowXL
+# FitRowXL (Windows Only)
  Dynamically Autofit Row Height with VBA UDF Function
  
 (I am Vietnamese, so I translated the article into English)
