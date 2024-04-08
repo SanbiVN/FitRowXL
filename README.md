@@ -1,78 +1,70 @@
-# FitRowXL (Windows Only)
- Dynamically Autofit Row Height with VBA UDF Function
- 
-(I am Vietnamese, so I translated the article into English)
+# FitRowXL HÀM TỰ ĐỘNG GIÃN DÒNG
 
-*** LATEST UPDATE: 10:40 19/4/2021 ***
+### Chức năng ưu việt:
+- Co giãn dòng hoàn toàn tự động.
+- Co giãn dòng kể cả các ô đã được gộp.
+- Co giãn dòng với các giá trị nhiều ô gộp cùng dòng.
+- Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 409.5
+- Hoạt động cả ở chế độ Xem In Ấn.
+- Cách gõ hàm cài đặt đối số tùy chỉnh ưu việt:
++ Thêm chiều cao nhất định cho dòng đã giãn.
++ Đặt chiều cao mặc định cho vùng trống.
++ Đặt chiều cao mặc định cho dòng trống.
++ Tự đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn.
 
-Today, I will share with you a VBA UDF function that automatically stretches lines when the value in the worksheet changes, the line stretching will also change automatically.
-The code below is the first version, so there may be certain errors, so you should check first, if the code is stable, you can use it.
+Vì dùng hàm UDF nên rất tối ưu, tiết kiệm CPU.
+Chỉ cần gõ một biểu thức FITROW cho cả vùng cần co giãn.
 
-I decided to write this code because there are many posts on the forum that ask about automatic line spacing, and when I read through those posts, no one can handle the problem thoroughly, or the code is not dark. pros, or code that does not handle multiple regions that have the same line.
+## Hướng dẫn sử dụng hàm:
 
-And the UDF function is the best way to help you do not have to re-code, but just write the function as a normal Excel function to perform line stretching.
+Hàm FITROW được viết theo phương pháp mới nên cách nhập đối số là gõ hàm như dưới đây:
 
+Hàm cài đặt và bổ trợ	| Kiểu	| Chức năng
+----------------------|------|----------
+ff_Padding(Height) |	Số |	Tăng chiều cao thêm một số
+ff_defaultHeight(Height)	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
+ff_HeightOfRowNull(Height) |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
+ff_AllSheets() |	Có	| Giãn dòng kể cả vùng ở trang tính không hiện hành.
+ff_AutoFit()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
+ff_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
+ff_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
+​
+Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,ff_Padding(5)) ​
+Các hàm với các ký tự đầu là ff_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​
+Ví dụ: gõ =FITROW(A1,B4,C5), sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
 
+CÁC HÀM LỆNH TẠO NÚT VÀ BIỂU THỨC NHANH:
 
-UDF Function S_FitRow:
-
-### Function:
-1. Fit Row automatic.
-2. Include merged cells.
-3. Stretch the line with multi-cell values on the same line.
-4. Include Print mode.
-5. Add a certain height after line reduction.
-6. Because of using UDF function, it is very optimal and saves CPU.
-
-### Instructions for using the function:
-
-Order	Parameters	Type	Ability
-1	Target	The area to be stretched	Get the area to be elastic
-2	Margin	Number type	Increase the height by some
-3	defaultHeight	Number type	The default height if the value is empty
-4	IncludeNoWrap	Yes / No	Elasticity even with zero WapText
-5	Title	Chain	Any string set by the user (Otherwise, return the value to Fit: {area})
-
-How to write the function quickly, type in the string =S_FitRow and press Ctrl + Shift + A.
-
-### Example: = S_FitRow (A1: E9, 5, 40, FALSE)
-+ A1: E9 is the area to be scaled
-+ 5 is the height increase by 5 units
-+ 40 is the default height if all values are empty
-+ FALSE then the cell is not WapText is inelastic.
-You can also type quickly =S_FitRow(A1: E9), ignores the settings
-
-### Note: the function only does line stretch if the WrapText mode of the cells is active. Add-in Methods:
-1. Type S_FitRow_OFF function: If you are editing a worksheet, turn off line stretching or turn on Design Mode in the Developer Tab.
-2. Type S_FitRow_ON function: If auto line stretching is turned off, turn it on.
-3. Procedure S_FitRow_Toggle + Check box named chxAutoFitRow is used to turn on and off line spacing if desired (The example is in Sheet1 in the attached file below on Github).
-Step 3 is a procedure to prevent application code calculated at just kicked off, as may encounter status code will slow down the boot process.
-Let the following code in the Workbook_Open event: Call S_FitRow_Off
-Please reopen in step 2 or step 3.
-
-*** If you write too much formula, the indispensable function S_FitRow this step 3
-
-How to enter multiple arrays:
-Method 1: Use the Excel Indirect function: = S_FitRow (INDIRECT ({"A1: C9", "D2: D3", "E5: E6"}), 5, 40)
-Method 2: Use S_Cells user-define function: = S_FitRow (S_Cells (A1: C9, D2: D3, E5: E6), 5, 40)
+HÀM	| Chức năng
+----------------------|----------------
+=FITROW_AddFX()​ | Tạo nhanh biểu thức FITROW vào ô
+=FITROW_AddFXPrintArea()​ | Tạo nhanh biểu thức FITROW vùng in vào ô
+=FITROW_AddButton()​ | Tạo nút nhấn để giãn dòng
+=FITROW_AddButtonPrintArea()​ | Tạo nút nhấn để giãn dòng vùng in
+=FitRow_Off()​ | Tắt chế độ tự động giãn dòng
+=FitRow_On()​ | Bật chế độ tự động giãn dòng
 
 
-### Utilize the function:
-With 2 following examples:
-1. How to write the general function as follows will cause slow and CPU consumption:
-= S_FitRow (A1: Z500)
-2. Writing a single function for each region saves, and the code will run faster:
-= S_FitRow (A1: Z1)
-= S_FitRow (A2: Z2)
-= S_FitRow (A3: Z4)
+Viết hàm nhanh: =FITROW(A2:F1000)
+Viết hàm có cài đặt đối số: =FITROW(A2:F1000,ff_defaultHeight(40),ff_Padding(5))
+Cách nhập nhiều vùng cần co giãn dòng:
+=FITROW(A1:C9,D2:F3,E5:E6)​
+​
+Phím tắt giãn dòng: CTRL+SHIFT+ALT+R
 
-That is, enter the area so that the function corresponds to the largest number of merged rows of the corresponding row.
-If we have the combined regions A1: C9, D2: D3, E5: E6, then it is clear that A1: C9 has lines containing all the remaining regions,
-So we write: = S_FitRow (A1: E9)
+Các hàm Bổ trợ:
+1. Gõ hàm FITROW_OFF: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
+2. Gõ hàm FITROW_ON: Bật chế độ co giãn dòng tự động.​
+3. Thủ tục FITROW_Toggle + Check box có tên là chxAutoFitRow dùng để bật tắt chế độ co giãn dòng nếu muốn (Ví dụ nằm ở Sheet1 trong tập tin đính kèm bên dưới).​
+Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​
+​
+Hãy để dòng code sau vào sự kiện Workbook_Open: Call FITROW_Off​
+Hãy mở lại bằng bước 2 hoặc bước 3.​
 
-Possible errors:
-Because the code will borrow a cell in the worksheet as the cell for line spacing, an error occurs if the function has a reference range intersecting the borrowed cell.
-If there are two functions that refer to the intersection of the two regions, an error may occur.
-If the sheet or cell reference is locked, an error may also occur.
 
-*** Please note that the code may not be optimal, so it can be updated many times, so if you use the code, you should regularly review the article, there will be an update notice if any. at the beginning of the post.
+****Lưu ý:
+Code sẽ tạo trang tính ẩn có tên __CELLFIXING__ để giãn dòng.
+Khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ không hoạt động.
+Nếu trong trang tính có hàm giãn dòng, không nên sử dụng hàm RandBetween, và các hàm random.
+
+***Mã có thể chưa được tối ưu nhất, nên có thể cập nhật lại nhiều lần, nên nếu các bạn có sử dụng code thì nên thường xuyên xem lại bài viết, sẽ có thông báo cập nhật nếu có ở đầu bài viết.
