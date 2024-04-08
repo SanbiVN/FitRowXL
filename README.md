@@ -7,10 +7,10 @@
 - Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 409.5
 - Hoạt động cả ở chế độ Xem In Ấn.
 - Cách gõ hàm cài đặt đối số tùy chỉnh ưu việt:
-+ Thêm chiều cao nhất định cho dòng đã giãn.
-+ Đặt chiều cao mặc định cho vùng trống.
-+ Đặt chiều cao mặc định cho dòng trống.
-+ Tự đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn.
+ 1. Thêm chiều cao nhất định cho dòng đã giãn.
+ 2. Đặt chiều cao mặc định cho vùng trống.
+ 3. Đặt chiều cao mặc định cho dòng trống.
+ 4. Tự đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn.
 
 Vì dùng hàm UDF nên rất tối ưu, tiết kiệm CPU.
 Chỉ cần gõ một biểu thức FITROW cho cả vùng cần co giãn.
