@@ -1,4 +1,4 @@
-# FitRowXL HÀM TỰ ĐỘNG GIÃN DÒNG
+# FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
 
 [Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.31.xlsm)
 
