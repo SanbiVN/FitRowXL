@@ -1,8 +1,8 @@
 # FitRowXL HÀM TỰ ĐỘNG GIÃN DÒNG
 
-[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/backup_and_restore_excel/FitRowXLv2.1.zip)
+[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.31.xlsm)
 
-[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/BackupAndRestoreXL/releases/download/backup_and_restore_excel/BackupAndRestoreXL_v2.1.zip) 
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.31.xlsm) 
 
 
 ### Chức năng ưu việt:
