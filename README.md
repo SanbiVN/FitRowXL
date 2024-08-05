@@ -1,5 +1,10 @@
 # FitRowXL HÀM TỰ ĐỘNG GIÃN DÒNG
 
+[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/backup_and_restore_excel/FitRowXLv2.1.zip)
+
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/BackupAndRestoreXL/releases/download/backup_and_restore_excel/BackupAndRestoreXL_v2.1.zip) 
+
+
 ### Chức năng ưu việt:
 - Co giãn dòng hoàn toàn tự động.
 - Co giãn dòng kể cả các ô đã được gộp.
