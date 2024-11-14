@@ -1,8 +1,8 @@
 # FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
 
-[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.42.xlsm)
+[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.43.xlsm)
 
-[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.42.xlsm) 
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.43.xlsm) 
 
 
 ### Chức năng ưu việt:
