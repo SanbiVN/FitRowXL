@@ -4,6 +4,7 @@
 
 [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.44.xlsm) 
 
+(Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook)
 
 ### Chức năng ưu việt:
 - Co giãn dòng hoàn toàn tự động.
