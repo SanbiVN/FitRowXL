@@ -27,16 +27,16 @@ Hàm FITROW được viết theo phương pháp mới nên cách nhập đối s
 
 Hàm cài đặt và bổ trợ	| Kiểu	| Chức năng
 ----------------------|------|----------
-ff_Padding(Height) |	Số |	Tăng chiều cao thêm một số
-ff_defaultHeight(Height)	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
-ff_HeightOfRowNull(Height) |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
-ff_AllSheets() |	Có	| Giãn dòng kể cả vùng ở trang tính không hiện hành.
-ff_AutoFit()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
-ff_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
-ff_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
+fit_Padding(Height) |	Số |	Tăng chiều cao thêm một số
+fit_defaultHeight(Height)	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
+fit_HeightOfRowNull(Height) |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
+fit_AllSheets() |	Có	| Giãn dòng kể cả vùng ở trang tính không hiện hành.
+fit_AutoFit()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
+fit_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
+fit_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
 ​
-Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,ff_Padding(5)) ​
-Các hàm với các ký tự đầu là ff_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​
+Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,fit_Padding(5)) ​
+Các hàm với các ký tự đầu là fit_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​
 Ví dụ: gõ =FITROW(A1,B4,C5), sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
 
 CÁC HÀM LỆNH TẠO NÚT VÀ BIỂU THỨC NHANH:
@@ -52,7 +52,7 @@ HÀM	| Chức năng
 
 
 Viết hàm nhanh: =FITROW(A2:F1000)
-Viết hàm có cài đặt đối số: =FITROW(A2:F1000,ff_defaultHeight(40),ff_Padding(5))
+Viết hàm có cài đặt đối số: =FITROW(A2:F1000,fit_defaultHeight(40),fit_Padding(5))
 Cách nhập nhiều vùng cần co giãn dòng:
 =FITROW(A1:C9,D2:F3,E5:E6)​
 ​
