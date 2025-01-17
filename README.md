@@ -1,8 +1,10 @@
 # FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
 
-[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.44.xlsm)
+[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.45.xlsm)
 
-[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.44.xlsm) 
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.45.xlsm) 
+
+***Mật khẩu VBA là 1
 
 (Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook)
 
