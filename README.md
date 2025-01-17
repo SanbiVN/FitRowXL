@@ -20,7 +20,7 @@
  3. Đặt chiều cao mặc định cho dòng trống.
  4. Tự đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn.
 
-Vì dùng hàm UDF nên rất tối ưu, tiết kiệm CPU.
+Vì dùng hàm UDF nên rất tối ưu, tiết kiệm CPU. \
 Chỉ cần gõ một biểu thức FITROW cho cả vùng cần co giãn.
 
 ## Hướng dẫn sử dụng hàm:
@@ -37,8 +37,8 @@ fit_AutoFit()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi gi�
 fit_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
 fit_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
 ​
-Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,fit_Padding(5)) ​
-Các hàm với các ký tự đầu là fit_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​
+Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,fit_Padding(5)) ​ \
+Các hàm với các ký tự đầu là fit_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​ \
 Ví dụ: gõ =FITROW(A1,B4,C5), sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
 
 CÁC HÀM LỆNH TẠO NÚT VÀ BIỂU THỨC NHANH:
@@ -53,26 +53,24 @@ HÀM	| Chức năng
 =FitRow_On()​ | Bật chế độ tự động giãn dòng
 
 
-Viết hàm nhanh: =FITROW(A2:F1000)
-Viết hàm có cài đặt đối số: =FITROW(A2:F1000,fit_defaultHeight(40),fit_Padding(5))
-Cách nhập nhiều vùng cần co giãn dòng:
-=FITROW(A1:C9,D2:F3,E5:E6)​
+Viết hàm nhanh: ```=FITROW(A2:F1000)``` \
+Viết hàm có cài đặt đối số: ```=FITROW(A2:F1000,fit_defaultHeight(40),fit_Padding(5))``` \
+Cách nhập nhiều vùng cần co giãn dòng: ```=FITROW(A1:C9,D2:F3,E5:E6)​``` \
 ​
 Phím tắt giãn dòng: CTRL+SHIFT+ALT+R
 
 Các hàm Bổ trợ:
-1. Gõ hàm FITROW_OFF: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
-2. Gõ hàm FITROW_ON: Bật chế độ co giãn dòng tự động.​
+1. Gõ hàm ```FITROW_OFF```: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
+2. Gõ hàm ```FITROW_ON```: Bật chế độ co giãn dòng tự động.​
 3. Thủ tục FITROW_Toggle + Check box có tên là chxAutoFitRow dùng để bật tắt chế độ co giãn dòng nếu muốn (Ví dụ nằm ở Sheet1 trong tập tin đính kèm bên dưới).​
-Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​
+Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​ \
 ​
-Hãy để dòng code sau vào sự kiện Workbook_Open: Call FITROW_Off​
+Hãy để dòng code sau vào sự kiện Workbook_Open: Call FITROW_Off​ \
 Hãy mở lại bằng bước 2 hoặc bước 3.​
 
-
 ****Lưu ý:
-Code sẽ tạo trang tính ẩn có tên __CELLFIXING__ để giãn dòng.
-Khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ không hoạt động.
-Nếu trong trang tính có hàm giãn dòng, không nên sử dụng hàm RandBetween, và các hàm random.
+Code sẽ tạo trang tính ẩn có tên __CELLFIXING__ để giãn dòng. \
+Khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ không hoạt động. \
+Nếu trong trang tính có hàm giãn dòng, không nên sử dụng hàm RandBetween, và các hàm random. 
 
 ***Mã có thể chưa được tối ưu nhất, nên có thể cập nhật lại nhiều lần, nên nếu các bạn có sử dụng code thì nên thường xuyên xem lại bài viết, sẽ có thông báo cập nhật nếu có ở đầu bài viết.
