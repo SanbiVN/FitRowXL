@@ -1,12 +1,13 @@
 # FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
 
-[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.45.xlsm)
+[Click vào đây để tải xuống](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm)
 
-[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.45.xlsm) 
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm) 
 
 ***Mật khẩu VBA là 1
 
 (Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook)
+Nếu chép thiếu mã từ ThisWorkbook thì bổ trợ ```fit_Auto()``` sẽ bị vô hiệu hóa.
 
 ### Chức năng ưu việt:
 - Co giãn dòng hoàn toàn tự động.
@@ -33,13 +34,13 @@ fit_Padding(Height) |	Số |	Tăng chiều cao thêm một số
 fit_defaultHeight(Height)	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
 fit_HeightOfRowNull(Height) |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
 fit_AllSheets() |	Có	| Giãn dòng kể cả vùng ở trang tính không hiện hành.
-fit_AutoFit()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
+fit_Auto()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
 fit_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
 fit_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
 ​
-Ví dụ: giãn dòng A1 và đối số, gõ =FITROW(A1,fit_Padding(5)) ​ \
+Ví dụ: giãn dòng A1 và đối số, gõ ```=FITROW(A1,fit_Padding(5))``` ​ \
 Các hàm với các ký tự đầu là fit_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​ \
-Ví dụ: gõ =FITROW(A1,B4,C5), sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
+Ví dụ: gõ ```=FITROW(A1,B4,C5)```, sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
 
 CÁC HÀM LỆNH TẠO NÚT VÀ BIỂU THỨC NHANH:
 
@@ -69,7 +70,7 @@ Hãy để dòng code sau vào sự kiện Workbook_Open: Call FITROW_Off​ \
 Hãy mở lại bằng bước 2 hoặc bước 3.​
 
 ****Lưu ý:
-Code sẽ tạo trang tính ẩn có tên __CELLFIXING__ để giãn dòng. \
+Code sẽ tạo trang tính ẩn có tên ```__CELLFIXING__``` để giãn dòng. \
 Khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ không hoạt động. \
 Nếu trong trang tính có hàm giãn dòng, không nên sử dụng hàm RandBetween, và các hàm random. 
 
