@@ -6,8 +6,8 @@
 
 ***Mật khẩu VBA là 1
 
-(Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook)
-Nếu chép thiếu mã từ ThisWorkbook thì bổ trợ ```fit_Auto()``` sẽ bị vô hiệu hóa.
+(Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook) \
+Nếu chép thiếu mã từ ThisWorkbook thì bổ trợ ```fit_Auto()``` sẽ bị vô hiệu hóa, phím tắt cũng bị vô hiệu hóa.
 
 ### Chức năng ưu việt:
 - Co giãn dòng hoàn toàn tự động.
