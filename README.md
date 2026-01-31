@@ -1,6 +1,11 @@
 # FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
 [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm) 
 
+### Phiên bảng mới 2026
+Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
+
+<img width="1385" height="182" alt="image" src="https://github.com/user-attachments/assets/46704ef7-4ff7-4ca0-80fe-4516257db05c" />
+
 
 ------------------------------------------------
 ## TẢI XUỐNG
