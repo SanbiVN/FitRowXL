@@ -12,12 +12,12 @@
 ------------------------------------------------
 ## TẢI XUỐNG
 <!-- items that need to be updated release to release -->
-[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.1/FitRowXL_v1.1.zip
+[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.2/FitRowXL_v1.2.zip
 [ptUserXlsm]: https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm
 
 |  Thông tin   | Tải xuống | Ghi chú |
 |--------------|-----------|----------|
-| FixRowXL Add-in | [FitRowXL_v1.1.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
+| FixRowXL Add-in | [FitRowXL_v1.2.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
 | FixRowXL gọi hàm | [FitRowXL_v2.46.xlsm][ptUserXlsm] | Bản dùng cho nhúng code trực tiếp vào tệp để gọi hàm   |
 
 
