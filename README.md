@@ -9,8 +9,7 @@
 - Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
 - Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
 
-  ![fit rows and columns instantly](https://github.com/user-attachments/assets/6cade03a-02bd-4157-9d08-fd40981353c4)
-
+![fit rows and columns instantly](https://github.com/user-attachments/assets/3c661ef6-26cb-4511-b646-eaf9764ac9ec)
 
 ------------------------------------------------
 ## TẢI XUỐNG
