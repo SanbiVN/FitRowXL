@@ -7,7 +7,7 @@
 - Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
 - Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
 
-<img width="1385" height="182" alt="image" src="https://github.com/user-attachments/assets/46704ef7-4ff7-4ca0-80fe-4516257db05c" />
+<img width="1455" height="180" alt="image" src="https://github.com/user-attachments/assets/36e07ada-bf29-46b0-893c-3704c08da7e2" />
 
 ------------------------------------------------
 ## TẢI XUỐNG
