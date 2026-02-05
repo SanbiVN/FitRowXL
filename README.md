@@ -24,7 +24,7 @@
 ***Mật khẩu VBA là 1
 
 
-### (Hướng dẫn bên dưới dành cho tệp FitRowXL_v2.46.xlsm chứa mã VBA để sao chép vào dự án)\
+### (Hướng dẫn bên dưới dành cho tệp FitRowXL_v2.46.xlsm chứa mã VBA để sao chép vào dự án)
 (Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook) \
 Nếu chép thiếu mã từ ThisWorkbook thì bổ trợ ```fit_Auto()``` sẽ bị vô hiệu hóa, phím tắt cũng bị vô hiệu hóa.
 
