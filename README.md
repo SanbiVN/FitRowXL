@@ -1,4 +1,4 @@
-# FitRowXL - HÀM TỰ ĐỘNG GIÃN DÒNG CHO EXCEL
+# FitRowXL - ADD-IN TỰ ĐỘNG HÓA GIÃN DÒNG CỘT CHO EXCEL
 [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm) 
 
 ### Phiên bảng mới 2026
