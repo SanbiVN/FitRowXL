@@ -3,11 +3,14 @@
 
 ### Phiên bảng mới 2026
 - Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
-#### Tính năng mới
-- Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
-- Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
-
 <img width="1455" height="180" alt="image" src="https://github.com/user-attachments/assets/36e07ada-bf29-46b0-893c-3704c08da7e2" />
+
+#### Tính năng mới
+- Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
+- Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
+
+  ![fit rows and columns instantly](https://github.com/user-attachments/assets/6cade03a-02bd-4157-9d08-fd40981353c4)
+
 
 ------------------------------------------------
 ## TẢI XUỐNG
