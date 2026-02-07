@@ -7,6 +7,11 @@
 
 #### Tính năng mới
 - Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
+- Hỗ trợ giãn dòng trước khi in ấn tại mục thiết lập Giãn nhiều vùng ô:
+> Khi tạo mới sẽ có nhập Macro gọi trước và sau khi giãn.
+> Cũng có thể gọi Macro trong mã VBA của bạn với Application.Run "FitRowAreas", "TenDaThietLap"
+​> Để giãn dòng nhanh cho vùng ô không có ô Gộp hãy chọn đối tượng là Table
+
 - Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
 
 ![fit rows and columns instantly](https://github.com/user-attachments/assets/3c661ef6-26cb-4511-b646-eaf9764ac9ec)
