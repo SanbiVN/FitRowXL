@@ -5,7 +5,15 @@
 - Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
 <img width="1455" height="180" alt="image" src="https://github.com/user-attachments/assets/36e07ada-bf29-46b0-893c-3704c08da7e2" />
 
-#### Tính năng mới
+# DANH MỤC
+- [Tính năng mới](#tính-năng-mới)
+- [TẢI XUỐNG](#tải-xuống)
+- [Chức năng](#chức-năng)
+- [Thiết lập giãn dòng nhanh](#thiết-lập-giãn-dòng-nhanh)
+- [Thiết lập giãn dòng nhiều vùng ô](#thiết-lập-giãn-dòng-nhiều-vùng-ô)
+- [Lưu ý](#lưu-ý)
+  
+# Tính năng mới
 - Thêm chế độ tự động cập nhật ứng dụng lên phiên bản mới, hoặc phục hồi phiên bản.
 - Hỗ trợ giãn dòng trước khi in ấn tại mục thiết lập **Giãn nhiều vùng ô**:
 > Khi tạo mới sẽ có nhập Macro gọi trước và sau khi giãn.\
@@ -16,8 +24,7 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 
 ![fit rows and columns instantly](https://github.com/user-attachments/assets/3c661ef6-26cb-4511-b646-eaf9764ac9ec)
 
-------------------------------------------------
-## TẢI XUỐNG
+# TẢI XUỐNG
 <!-- items that need to be updated release to release -->
 [ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.3/FitRowXL_v1.3.zip
 [ptUserXlsm]: https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm
@@ -27,79 +34,54 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 | FixRowXL Add-in | [FitRowXL_v1.3.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
 | FixRowXL gọi hàm | [FitRowXL_v2.46.xlsm][ptUserXlsm] | Bản dùng cho nhúng code trực tiếp vào tệp để gọi hàm   |
 
-
 ***Mật khẩu VBA là 1
 
-
-### (Hướng dẫn bên dưới dành cho tệp FitRowXL_v2.46.xlsm chứa mã VBA để sao chép vào dự án)
-(Sao chép mã vào dự án của bạn phải bao gồm 1 module + mã trong ThisWorkbook) \
-Nếu chép thiếu mã từ ThisWorkbook thì bổ trợ ```fit_Auto()``` sẽ bị vô hiệu hóa, phím tắt cũng bị vô hiệu hóa.
-
-### Chức năng ưu việt:
+# Chức năng
 - Co giãn dòng hoàn toàn tự động.
 - Co giãn dòng kể cả các ô đã được gộp.
 - Co giãn dòng với các giá trị nhiều ô gộp cùng dòng.
-- Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 409.5
-- Hoạt động cả ở chế độ Xem In Ấn.
-- Cách gõ hàm cài đặt đối số tùy chỉnh ưu việt:
- 1. Thêm chiều cao nhất định cho dòng đã giãn.
- 2. Đặt chiều cao mặc định cho vùng trống.
- 3. Đặt chiều cao mặc định cho dòng trống.
- 4. Tự đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn.
+- Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 412.5
+- Hoạt động cả ở chế độ Xem In Ấn vùng in đã Scale.
 
-Vì dùng hàm UDF nên rất tối ưu, tiết kiệm CPU. \
-Chỉ cần gõ một biểu thức FITROW cho cả vùng cần co giãn.
 
-## Hướng dẫn sử dụng hàm:
+# Thiết lập giãn dòng nhanh
 
-Hàm FITROW được viết theo phương pháp mới nên cách nhập đối số là gõ hàm như dưới đây:
+<img width="559" height="112" alt="image" src="https://github.com/user-attachments/assets/2d534ebd-e0e3-4844-9bbd-c03630556047" />\
+​​
+> Phím tắt giãn dòng nhanh mặc định (có thể đổi): **CTRL+SHIFT+ALT+R**
 
-Hàm cài đặt và bổ trợ	| Kiểu	| Chức năng
+Thiết lập một tên mới để lưu thiết lập để tái sử dụng về sau.
+Thiết lập các chỉ số giãn dòng như sau:
+
+Giá trị	| Kiểu	giá trị | Chức năng
 ----------------------|------|----------
-fit_Padding(Height) |	Số |	Tăng chiều cao thêm một số
-fit_defaultHeight(Height)	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
-fit_HeightOfRowNull(Height) |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
-fit_AllSheets() |	Có	| Giãn dòng kể cả vùng ở trang tính không hiện hành.
-fit_Tables(table1, ...)	| Vùng ô	| Nếu vùng dữ liệu là Table hãy nhập vào hàm này, để tăng tốc giãn dòng
-fit_Auto()	| Có	| Bật tự động Fit khi ô tham chiếu thay đổi giá trị
-fit_Indexes(cell1,cell2,...)	| Vùng | chứa nhóm văn bản	Căn chỉnh biên bản ở chế độ PrintView, khi giãn dòng, chiều cao trang in có thể cao hơn hoặc thấp hơn, làm cho trang in bị xê dịch, nên cần điều chỉnh để phù hợp.
-fit_Scale(scaleWidth,scaleHeight,indentWidth)		| | Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
-​
+Đệm chiều cao |	Số |	Tăng chiều cao thêm một số
+Chiều cao mặc định	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
+Chiều cao dòng trống |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
+Tỉ lệ chiều rộng |	Số	| Đặt tỉ lệ giãn chiều rộng, Tăng giảm chiều rộng trước khi tính toán giãn dòng
+Chiều cao vùng trống	| Số	| Nếu vùng dữ liệu là Table hãy nhập vào hàm này, để tăng tốc giãn dòng
+Kiểu giãn dòng	| Tên	| Đặt kiểu giãn dòng cho các cột gộp ô
 
-Ví dụ: giãn dòng A1 và đối số, gõ ```=FITROW(A1,fit_Padding(5))``` ​ \
-Các hàm với các ký tự đầu là fit_... Chính là các hàm cài đặt và bổ trợ cho hàm chính FITROW​ \
-Ví dụ: gõ ```=FITROW(A1,B4,C5)```, sẽ co giãn các ô A1, B4, C5, các cài đặt là mặc định​
+# Thiết lập giãn dòng nhiều vùng ô
 
-CÁC HÀM LỆNH TẠO NÚT VÀ BIỂU THỨC NHANH:
+<img width="180" height="111" alt="image" src="https://github.com/user-attachments/assets/9a07d321-1e4b-4b45-940d-233f4722e7ee"/>
 
-HÀM	| Chức năng
-----------------------|----------------
-=FITROW_AddFX()​ | Tạo nhanh biểu thức FITROW vào ô
-=FITROW_AddFXPrintArea()​ | Tạo nhanh biểu thức FITROW vùng in vào ô
-=FITROW_AddButton()​ | Tạo nút nhấn để giãn dòng
-=FITROW_AddButtonPrintArea()​ | Tạo nút nhấn để giãn dòng vùng in
-=FitRow_Off()​ | Tắt chế độ tự động giãn dòng
-=FitRow_On()​ | Bật chế độ tự động giãn dòng
+Giá trị	| Kiểu	giá trị | Chức năng
+----------------------|------|----------
+Đệm chiều cao |	Số |	Tăng chiều cao thêm một số
+Chiều cao mặc định	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
+Chiều cao dòng trống |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
+Tỉ lệ chiều rộng |	Số	| Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
+Chiều cao vùng trống	| Số	| Nếu vùng dữ liệu là Table hãy nhập vào hàm này, để tăng tốc giãn dòng
+Kiểu giãn dòng	| Tên	| Đặt kiểu giãn dòng cho các cột gộp ô
 
 
-Viết hàm nhanh: ```=FITROW(A2:F1000)``` \
-Viết hàm có cài đặt đối số: ```=FITROW(A2:F1000,fit_defaultHeight(40),fit_Padding(5))``` \
-Cách nhập nhiều vùng cần co giãn dòng: ```=FITROW(A1:C9,D2:F3,E5:E6)​``` \
-​
-Phím tắt giãn dòng: CTRL+SHIFT+ALT+R
-
-Các hàm Bổ trợ:
+# Các hàm Bổ trợ:
 1. Gõ hàm ```FITROW_OFF```: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
 2. Gõ hàm ```FITROW_ON```: Bật chế độ co giãn dòng tự động.​
 3. Thủ tục FITROW_Toggle + Check box có tên là chxAutoFitRow dùng để bật tắt chế độ co giãn dòng nếu muốn (Ví dụ nằm ở Sheet1 trong tập tin đính kèm bên dưới).​
 Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​ \
 ​
-Hãy để dòng code sau vào sự kiện Workbook_Open: Call FITROW_Off​ \
-Hãy mở lại bằng bước 2 hoặc bước 3.​
-
-****Lưu ý:
+# Lưu ý
 Code sẽ tạo trang tính ẩn có tên ```__CELLFIXING__``` để giãn dòng. \
-Khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ không hoạt động. \
-Nếu trong trang tính có hàm giãn dòng, không nên sử dụng hàm RandBetween, và các hàm random. 
-
-***Mã có thể chưa được tối ưu nhất, nên có thể cập nhật lại nhiều lần, nên nếu các bạn có sử dụng code thì nên thường xuyên xem lại bài viết, sẽ có thông báo cập nhật nếu có ở đầu bài viết.
+Sau khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ bị mất trạng thái. 
