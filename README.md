@@ -22,8 +22,6 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 
 - Thêm thiết lập tự động giãn dòng và cột tức thời khi giá trị ô không gộp thay đổi (không làm mất chế độ Undo).
 
-![fit rows and columns instantly](https://github.com/user-attachments/assets/3c661ef6-26cb-4511-b646-eaf9764ac9ec)
-
 # TẢI XUỐNG
 <!-- items that need to be updated release to release -->
 [ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.3/FitRowXL_v1.3.zip
@@ -93,6 +91,8 @@ Kiểu giãn dòng
 # Tự động hóa giãn dòng
 
 <img width="204" height="112" alt="image" src="https://github.com/user-attachments/assets/fb8122cb-e5f9-47a7-84b1-3ff733561ff3" />
+
+![fit rows and columns instantly](https://github.com/user-attachments/assets/3c661ef6-26cb-4511-b646-eaf9764ac9ec)
 
 Mục đặt tự động hóa giãn cột và dòng tự động ngay tức thời, hành vi giãn dòng này không làm mất trạng thái chế độ Undo và Redo.
 (Sử dụng lệnh gửi nhấn chuột vào tiêu đề để giãn dòng như thao tác tay)
