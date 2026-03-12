@@ -3,7 +3,7 @@
 
 ### Phiên bảng mới 2026
 - Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
-<img width="1491" height="189" alt="image" src="https://github.com/user-attachments/assets/a74bf7cb-062d-4648-9d1f-03662d4255a5" />
+<img width="1480" height="180" alt="image" src="https://github.com/user-attachments/assets/7c86dda2-3ab8-4e24-87ad-3c4b76a6eeb9" />
 
 # DANH MỤC
 - [Tính năng mới](#tính-năng-mới)
@@ -46,7 +46,7 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 
 # Thiết lập giãn dòng nhanh
 
-<img width="559" height="112" alt="image" src="https://github.com/user-attachments/assets/2d534ebd-e0e3-4844-9bbd-c03630556047" />\
+<img width="563" height="116" alt="image" src="https://github.com/user-attachments/assets/190ebd7d-e68b-49f1-8792-afb0e2e0e783" />\
 ​​
 > Phím tắt giãn dòng nhanh mặc định (có thể đổi): **CTRL+SHIFT+ALT+R**
 
@@ -64,7 +64,7 @@ Kiểu giãn dòng	| Tên	| Đặt kiểu giãn dòng cho các cột gộp ô
 
 # Thiết lập giãn dòng nhiều vùng ô
 
-<img width="180" height="111" alt="image" src="https://github.com/user-attachments/assets/9a07d321-1e4b-4b45-940d-233f4722e7ee"/>
+<img width="185" height="114" alt="image" src="https://github.com/user-attachments/assets/67574e8a-d7e0-4b64-8713-d673968aa423" />
 
 Tính năng giãn nhiều vòng ô cho phép thiết lập nhiều vùng ô với các tùy chọn chỉ sổ riêng biệt, đồng thời hỗ trợ in ấn.
 Cho phép tạo và lưu thiết lập để tái sử dụng, cho phép gọi trong dự án chứa mã VBA của bạn để thực hiện giãn dòng trước khi in ấn hoặc công việc khác.
@@ -90,13 +90,38 @@ Tỉ lệ chiều rộng
 Chiều cao vùng trống	
 Kiểu giãn dòng	
 
+# Tự động hóa giãn dòng
+
+<img width="204" height="112" alt="image" src="https://github.com/user-attachments/assets/fb8122cb-e5f9-47a7-84b1-3ff733561ff3" />
+
+Mục đặt tự động hóa giãn cột và dòng tự động ngay tức thời, hành vi giãn dòng này không làm mất trạng thái chế độ Undo và Redo.
+(Sử dụng lệnh gửi nhấn chuột vào tiêu đề để giãn dòng như thao tác tay)
+
+### Các nút chức năng
+- **Đặt cho vùng ô**: Kiểm tra và cập nhật add-in
+- **Đặt cho cả trang tính**
+- **Đặt từ hợp chọn**
+- **Bật/tắt tự động hóa**
+
+
 <!-- 
 # Các hàm Bổ trợ:
 1. Gõ hàm ```FITROW_OFF```: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
 2. Gõ hàm ```FITROW_ON```: Bật chế độ co giãn dòng tự động.​
 3. Thủ tục FITROW_Toggle + Check box có tên là chxAutoFitRow dùng để bật tắt chế độ co giãn dòng nếu muốn (Ví dụ nằm ở Sheet1 trong tập tin đính kèm bên dưới).​
 Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​ \
--->​
+-->
+
+
+# Các nút chức năng của add-in
+<img width="305" height="114" alt="image" src="https://github.com/user-attachments/assets/33b9cfa4-4876-4396-8996-f67fa6c4f6c8" />
+
+- **Cập nhật**: Kiểm tra và cập nhật add-in
+- **Đặt lại cài đặt**
+- **Thoát và gỡ cài đặt**
+- **Hướng dẫn và nguồn**
+- **Liên hệ Zalo**
+​
 # Lưu ý
 Code sẽ tạo trang tính ẩn có tên ```__CELLFIXING__``` để giãn dòng. \
 Sau khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ bị mất trạng thái. 
