@@ -3,7 +3,7 @@
 
 ### Phiên bảng mới 2026
 - Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
-<img width="1455" height="180" alt="image" src="https://github.com/user-attachments/assets/36e07ada-bf29-46b0-893c-3704c08da7e2" />
+<img width="1491" height="189" alt="image" src="https://github.com/user-attachments/assets/a74bf7cb-062d-4648-9d1f-03662d4255a5" />
 
 # DANH MỤC
 - [Tính năng mới](#tính-năng-mới)
@@ -66,22 +66,37 @@ Kiểu giãn dòng	| Tên	| Đặt kiểu giãn dòng cho các cột gộp ô
 
 <img width="180" height="111" alt="image" src="https://github.com/user-attachments/assets/9a07d321-1e4b-4b45-940d-233f4722e7ee"/>
 
-Giá trị	| Kiểu	giá trị | Chức năng
-----------------------|------|----------
-Đệm chiều cao |	Số |	Tăng chiều cao thêm một số
-Chiều cao mặc định	| Số	| Chiều cao mặc định nếu giá trị rỗng, dễ hiểu, nếu co giãn vùng ô A1:C20, mà cả vùng đó rỗng, thì chỉnh về chiều cao mặc định.
-Chiều cao dòng trống |	Số	| Đặt chiều cao mặc định cho cả dòng rỗng (giãn vùng A1:Z20, dòng A2:Z2 rỗng)
-Tỉ lệ chiều rộng |	Số	| Đặt tỉ lệ giãn chiều rộng, chiều cao và thụt đầu dòng, khi chiều cao dòng vượt giới hạn
-Chiều cao vùng trống	| Số	| Nếu vùng dữ liệu là Table hãy nhập vào hàm này, để tăng tốc giãn dòng
-Kiểu giãn dòng	| Tên	| Đặt kiểu giãn dòng cho các cột gộp ô
+Tính năng giãn nhiều vòng ô cho phép thiết lập nhiều vùng ô với các tùy chọn chỉ sổ riêng biệt, đồng thời hỗ trợ in ấn.
+Cho phép tạo và lưu thiết lập để tái sử dụng, cho phép gọi trong dự án chứa mã VBA của bạn để thực hiện giãn dòng trước khi in ấn hoặc công việc khác.
 
+### Các nút chức năng
+- **Tạo mới**: Mở form tạo thiết lập và lưu thiết lập để tái sử dụng, cho phép gọi trong dự án chứa mã VBA của bạn để thực hiện giãn dòng trước khi in ấn hoặc công việc khác. Các thiết lập sẽ được lưu vào trong chính dự án Excel, dựa vào Name. Form gồm có các thiết lập:
+  - Đặt thủ tục gọi trước và sau khi gian dòng
+  - Đặt các vùng ô cần dịch chuyển vừa khít nằm trong trang sau khi giãn dòng cho vùng in.
+  - Danh sách tạo các vùng ô và chỉ số.
+  - Các nút nhấn giãn thử, xóa mục, tích chọn.
+- **Sửa thiết lập**: Sửa thiết lập từ tên trong hộp chọn
+- **Xóa thiết lập**: Xóa nếu không còn sử dụng lại thiết lập.
+- **Xóa thiết lập**: Xóa nếu không còn sử dụng lại thiết lập.
+- **Hộp tên thiết lập**: Để chọn mục đã thiết lập.
+- **Giãn dòng**: Giãn dòng dựa vào tên thiết lập.
 
+Các chỉ số thiết lập|
+----------------------|
+Đệm chiều cao 
+Chiều cao mặc định
+Chiều cao dòng trống
+Tỉ lệ chiều rộng 
+Chiều cao vùng trống	
+Kiểu giãn dòng	
+
+<!-- 
 # Các hàm Bổ trợ:
 1. Gõ hàm ```FITROW_OFF```: nếu đang chỉnh sửa trang tính hãy tắt chế độ co giãn dòng hoặc bật chế độ Design Mode trong Tab Developer.​
 2. Gõ hàm ```FITROW_ON```: Bật chế độ co giãn dòng tự động.​
 3. Thủ tục FITROW_Toggle + Check box có tên là chxAutoFitRow dùng để bật tắt chế độ co giãn dòng nếu muốn (Ví dụ nằm ở Sheet1 trong tập tin đính kèm bên dưới).​
 Bước 3 này là một thủ thuật để ngăn chặn code tính toán lúc ứng dụng vừa khởi động, vì có thể sẽ gặp phải tình trạng code sẽ làm chậm quá trình khởi động.​ \
-​
+-->​
 # Lưu ý
 Code sẽ tạo trang tính ẩn có tên ```__CELLFIXING__``` để giãn dòng. \
 Sau khi giãn dòng tự động chế độ Undo và Redo của trang tính sẽ bị mất trạng thái. 
