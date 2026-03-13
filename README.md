@@ -8,6 +8,7 @@
 # DANH MỤC
 - [Tính năng mới](#tính-năng-mới)
 - [TẢI XUỐNG](#tải-xuống)
+- [HƯỚNG DẪN CÀI ĐẶT](#hướng-dẫn-cài-đặt)
 - [Chức năng](#chức-năng)
 - [Thiết lập giãn dòng nhanh](#thiết-lập-giãn-dòng-nhanh)
 - [Thiết lập giãn dòng nhiều vùng ô](#thiết-lập-giãn-dòng-nhiều-vùng-ô)
@@ -33,6 +34,26 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 | FixRowXL gọi hàm | [FitRowXL_v2.46.xlsm][ptUserXlsm] | Bản dùng cho nhúng code trực tiếp vào tệp để gọi hàm   |
 
 ***Mật khẩu VBA là 1
+
+
+# HƯỚNG DẪN CÀI ĐẶT
+
+Tệp Add-in xlam để cài đặt vào Excel, sau khi cài đặt thì giao diện sử dụng hiển thị trên thanh Ribbon với tên ```TaxTCT```. Ứng dụng chỉ cần cài đặt một lần duy nhất, còn lại tự động kiểm tra và tải cài đặt phiên bản mới. \
+Giải nén vào một thư mục được đặt tên phù hợp, sau khi giải nén, vào thông tin tệp ngoài thư mục bỏ unblock tệp trước khi cài đặt nếu có.
+> <img width="377" height="389" alt="image" src="https://github.com/user-attachments/assets/e8cf3b18-41ab-433f-a873-b32b76e079de" /><img width="363" height="478" alt="image" src="https://github.com/user-attachments/assets/359bee94-f4b7-4fa2-bc48-23ab7723fd7b" />
+
+**Cách 1:** 
+- Mở trực tiếp Add-in hoặc nhấn chuột vào tệp để mở, trong Excel cần **```Enabled Macro```** để chương trình hoạt động. 
+- Nếu chương trình chưa cài đặt khởi động cùng Excel, khi nhấn **BẮT ĐẦU** chương trình sẽ hỏi có cài đặt khởi động vào Excel không?
+
+**Cách 2:** Thực hiện cài đặt Add-in bằng tay: 
+  - Nếu chưa có tab Deverloper hiển thị trên thanh Ribbon (Thanh công cụ): nhấn chuột phải vào thanh Ribbon, chọn **```Customize the Ribbon```**.
+  - Trong thẻ Deverloper chọn **```Excel Add-ins```**, sau đó chọn nút **```Browse...```** vào thư mục chứa tệp Add-in, đánh dấu Add-in vừa thêm và chọn nút OK 
+  - Nếu đã cài đặt vào Excel, nhưng mỗi khi mở ứng dụng không thấy trên thanh Ribbon, thì vào **```Task Manager```** cần End Task ứng dụng Excel chạy ngầm.
+
+ Nếu ứng dụng bị chặn không cho chạy macro thì hãy vào Cài đặt Excel, vào Trust Center, vào tạo đường dẫn thư mục an toàn cho thư mục chứa add-in tải về.
+ 
+
 
 # Chức năng
 - Co giãn dòng hoàn toàn tự động.
