@@ -24,12 +24,12 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 
 # TẢI XUỐNG
 <!-- items that need to be updated release to release -->
-[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.3/FitRowXL_v1.3.zip
+[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.4/FitRowXL_v1.4.zip
 [ptUserXlsm]: https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm
 
 |  Thông tin   | Tải xuống | Ghi chú |
 |--------------|-----------|----------|
-| FixRowXL Add-in | [FitRowXL_v1.3.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
+| FixRowXL Add-in | [FitRowXL_v1.4.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
 | FixRowXL gọi hàm | [FitRowXL_v2.46.xlsm][ptUserXlsm] | Bản dùng cho nhúng code trực tiếp vào tệp để gọi hàm   |
 
 ***Mật khẩu VBA là 1
