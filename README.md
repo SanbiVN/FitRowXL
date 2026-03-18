@@ -1,5 +1,5 @@
 # FitRowXL - Add-in tự động hóa giãn dòng cột cho excel
-[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm) 
+
 
 ### Phiên bảng mới 2026
 - Sử dụng Ribbon để thiết lập và giãn dòng nhanh chóng
@@ -28,6 +28,7 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 [ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.6/FitRowXL_v1.6.zip
 [ptUserXlsm]: https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm
 
+[![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/) 
 |  Thông tin   | Tải xuống | Ghi chú |
 |--------------|-----------|----------|
 | FixRowXL Add-in | [FitRowXL_v1.6.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
