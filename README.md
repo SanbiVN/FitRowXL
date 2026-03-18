@@ -66,6 +66,9 @@ Giải nén vào một thư mục được đặt tên phù hợp, sau khi giả
 # Thiết lập giãn dòng nhanh
 
 <img width="563" height="116" alt="image" src="https://github.com/user-attachments/assets/190ebd7d-e68b-49f1-8792-afb0e2e0e783" />\
+
+<img width="192" height="114" alt="image" src="https://github.com/user-attachments/assets/c6b64bb8-96a1-42f6-8860-fb9f4953c920" />
+
 ​​
 > Phím tắt giãn dòng nhanh mặc định (có thể đổi): **CTRL+SHIFT+ALT+R**
 
