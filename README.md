@@ -62,7 +62,7 @@ Giải nén vào một thư mục được đặt tên phù hợp, sau khi giả
 - Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 412.5
 - Hoạt động cả ở chế độ Xem In Ấn vùng in đã Scale.
 
-<img width="1031" height="355" alt="image" src="https://github.com/user-attachments/assets/124e4697-1c31-44d1-aae6-1001b375420a" />
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/30319687-4447-45ff-9309-a8c475a62c64" />
 
 
 # Thiết lập giãn dòng nhanh
