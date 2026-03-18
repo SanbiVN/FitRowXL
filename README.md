@@ -72,7 +72,7 @@ Giải nén vào một thư mục được đặt tên phù hợp, sau khi giả
 ​​
 > Phím tắt giãn dòng nhanh mặc định (có thể đổi): **CTRL+SHIFT+ALT+R**
 
-Thiết lập một tên mới để lưu thiết lập để tái sử dụng về sau.
+Thiết lập một tên mới để lưu thiết lập để tái sử dụng về sau. Sau khi giãn dòng có thể nhấn hoàn tác nếu giãn dòng không như ý muốn.
 Thiết lập các chỉ số giãn dòng như sau:
 
 Giá trị	| Kiểu	giá trị | Chức năng
