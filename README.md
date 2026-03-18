@@ -57,10 +57,12 @@ Giải nén vào một thư mục được đặt tên phù hợp, sau khi giả
 
 # Chức năng
 - Co giãn dòng hoàn toàn tự động.
-- Co giãn dòng kể cả các ô đã được gộp.
+- Co giãn dòng kể cả các ô đã được gộp, bao gồm các vùng gộp xen kẻ bất đối xứng.
 - Co giãn dòng với các giá trị nhiều ô gộp cùng dòng.
 - Co giãn dòng kể cả chiều cao vượt giới hạn của Excel là 412.5
 - Hoạt động cả ở chế độ Xem In Ấn vùng in đã Scale.
+
+<img width="1031" height="355" alt="image" src="https://github.com/user-attachments/assets/124e4697-1c31-44d1-aae6-1001b375420a" />
 
 
 # Thiết lập giãn dòng nhanh
