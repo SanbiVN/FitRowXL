@@ -25,13 +25,13 @@ Cũng có thể gọi Macro trong mã VBA của bạn với **Application.Run** 
 
 # TẢI XUỐNG
 <!-- items that need to be updated release to release -->
-[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.6/FitRowXL_v1.6.zip
+[ptUserAddin]: https://github.com/SanbiVN/FitRowXL/releases/download/v1.8/FitRowXL_v1.8.zip
 [ptUserXlsm]: https://github.com/SanbiVN/FitRowXL/releases/download/fit_row/FitRowXL_v2.46.xlsm
 
 [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/FitRowXL/total.svg)](https://github.com/SanbiVN/FitRowXL/releases/) 
 |  Thông tin   | Tải xuống | Ghi chú |
 |--------------|-----------|----------|
-| FixRowXL Add-in | [FitRowXL_v1.6.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
+| FixRowXL Add-in | [FitRowXL_v1.8.zip][ptUserAddin] | Bản mới 2026 sử dụng Add-in Ribbon thiết lập giãn dòng nhanh chóng |
 
 ***Mật khẩu VBA là 1
 
